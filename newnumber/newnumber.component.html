@@ -1,0 +1,32 @@
+<!-- <app-header></app-header> -->
+
+<div class="row" *ngIf="newcallinglistobj.length > 0">
+    <div class="col-md-12">
+        <table width="100%">
+            <thead>
+                <tr>
+                    <th>Sr</th>
+                    <th>Name</th>
+                    <th>Mobile</th>
+                    <th>Address</th>
+                    <th>Status</th>
+                    <th>Action</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let l of newcallinglistobj; let i=index;">
+                    <td>{{i+1}}</td>
+                    <td>{{l.name}}</td>
+                    <td>{{l.mobile}}</td>
+                    <td>{{l.address}}</td>
+                    <td>{{l.called_status}}</td>                   
+                    <td><span class="btn btn-primary" (click)="message(l.mobile)">measge</span></td>
+                </tr>
+               
+            </tbody>
+        </table>
+    </div>
+</div>
+<router-outlet></router-outlet>
+<!-- <app-footer></app-footer> -->
